@@ -9,10 +9,6 @@ The goal of this script is to calculate grade cutoffs when considering the end o
 Best of luck to you!
 '''
 
-# --------------------- TODO Play with these values to your best guess ---------------
-CLASS_HW_AVERAGE = 80
-CLASS_HW_STD = 10
-
 # --------------------- TODO Put your own scores here --------------------------------
 EXAM1_SCORE = 41
 EXAM2_SCORE = 33.5
@@ -31,6 +27,10 @@ SCORES = [
         80, 80, 80,     # 30, 29, 28
         80, 80, 80      # 33, 32, 31
 ]
+
+# --------------------- TODO Play with these values to your best guess ---------------
+CLASS_HW_AVERAGE = 80
+CLASS_HW_STD = 10
 
 # ------------------------------------------------------
 # NOTE No need to modify below unless you really want to
