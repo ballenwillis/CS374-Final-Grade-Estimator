@@ -84,8 +84,8 @@ EXAM2_POINTS = EXAM2_SCORE * 0.21
 totalPreFinal = HW_POINTS + EXAM1_POINTS + EXAM2_POINTS
 
 print("\nNeed on final for a A+:", (A_PLUS_CUTTOFF - totalPreFinal) / 0.3)
-print("\nNeed on final for a A:", (A_CUTTOFF - totalPreFinal) / 0.3)
-print("\nNeed on final for a A-:", (A_MINUS_CUTTOFF - totalPreFinal) / 0.3)
+print("Need on final for a A:", (A_CUTTOFF - totalPreFinal) / 0.3)
+print("Need on final for a A-:", (A_MINUS_CUTTOFF - totalPreFinal) / 0.3)
 
 print("\nNeed on final for a B+:", (B_PLUS_CUTTOFF - totalPreFinal) / 0.3)
 print("Need on final for a B:", (B_CUTTOFF - totalPreFinal) / 0.3)
