@@ -24,7 +24,7 @@ SCORES = [
         12.5, 0, 62.5,  # ...
         0, 55, 92.5,    # ...
         25, 90, 100,    # 27, 26, 25
-        80, 80, 80,     # 30, 29, 28
+        40, 55, 52,     # 30, 29, 28
         80, 80, 80      # 33, 32, 31
 ]
 
@@ -50,17 +50,28 @@ CLASS_HW_STD = CLASS_HW_STD * 0.28
 CLASS_STD = (EXAM1_STD + EXAM2_STD + CLASS_HW_STD) / 0.7
 CLASS_AVG = (EXAM1_MEAN * 0.21 + EXAM2_MEAN * 0.21 + CLASS_HW_AVERAGE * 0.28) / 0.7 # Doesn't consider the final
 
-A_CUTTOFF = CLASS_AVG + CLASS_STD
-B_CUTTOFF = CLASS_AVG
-C_CUTTOFF = CLASS_AVG - CLASS_STD
-D_CUTTOFF = CLASS_AVG - 2 * CLASS_STD
+A_PLUS_CUTTOFF = CLASS_AVG + 5/3 * CLASS_STD
+A_CUTTOFF = CLASS_AVG + 4/3 * CLASS_STD
+A_MINUS_CUTTOFF = CLASS_AVG + CLASS_STD
+
+B_PLUS_CUTTOFF = CLASS_AVG + 2/3 * CLASS_STD
+B_CUTTOFF = CLASS_AVG + 1/3 * CLASS_STD
+B_MINUS_CUTTOFF = CLASS_AVG
+
+C_PLUS_CUTTOFF = CLASS_AVG - 1/3 * CLASS_STD
+C_CUTTOFF = CLASS_AVG - 2/3 * CLASS_STD
+C_MINUS_CUTTOFF = CLASS_AVG - CLASS_STD
+
+D_PLUS_CUTTOFF = CLASS_AVG - 4/3 * CLASS_STD
+D_CUTTOFF = CLASS_AVG - 5/3 * CLASS_STD
+D_MINUS_CUTTOFF = CLASS_AVG - 2 * CLASS_STD
 
 print("Class Average:", CLASS_AVG)
 print("Class STD:", CLASS_STD)
-print("\n'B+/A-' threshold:", A_CUTTOFF)
-print("'C+/B-' threshold:", B_CUTTOFF)
-print("'D+/C-' threshold:", C_CUTTOFF)
-print("'F+/D-' threshold (PASSING):", D_CUTTOFF)
+print("\n'B+/A-' threshold:", A_MINUS_CUTTOFF)
+print("'C+/B-' threshold:", B_MINUS_CUTTOFF)
+print("'D+/C-' threshold:", C_MINUS_CUTTOFF)
+print("'F+/D-' threshold (PASSING):", D_MINUS_CUTTOFF)
 
 NUM_DROPPED_HWS = 12
 SCORES.sort()
@@ -72,7 +83,18 @@ EXAM2_POINTS = EXAM2_SCORE * 0.21
 
 totalPreFinal = HW_POINTS + EXAM1_POINTS + EXAM2_POINTS
 
+print("\nNeed on final for a A+:", (A_PLUS_CUTTOFF - totalPreFinal) / 0.3)
 print("\nNeed on final for a A:", (A_CUTTOFF - totalPreFinal) / 0.3)
+print("\nNeed on final for a A-:", (A_MINUS_CUTTOFF - totalPreFinal) / 0.3)
+
+print("\nNeed on final for a B+:", (B_PLUS_CUTTOFF - totalPreFinal) / 0.3)
 print("Need on final for a B:", (B_CUTTOFF - totalPreFinal) / 0.3)
+print("Need on final for a B-:", (B_MINUS_CUTTOFF - totalPreFinal) / 0.3)
+
+print("\nNeed on final for a C+:", (C_PLUS_CUTTOFF - totalPreFinal) / 0.3)
 print("Need on final for a C:", (C_CUTTOFF - totalPreFinal) / 0.3)
+print("Need on final for a C-:", (C_MINUS_CUTTOFF - totalPreFinal) / 0.3)
+
+print("\nNeed on final for a D+:", (D_PLUS_CUTTOFF - totalPreFinal) / 0.3)
 print("Need on final for a D:", (D_CUTTOFF - totalPreFinal) / 0.3)
+print("Need on final for a D-:", (D_MINUS_CUTTOFF - totalPreFinal) / 0.3)
