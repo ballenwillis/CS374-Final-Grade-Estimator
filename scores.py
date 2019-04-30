@@ -11,7 +11,7 @@ Best of luck to you!
 
 # --------------------- TODO Put your own scores here --------------------------------
 EXAM1_SCORE = 41
-EXAM2_SCORE = 33.5
+EXAM2_SCORE = 36.5
 
 # NOTE If you opted out of doing an assignment, just put a 0. Will calculate the same.
 SCORES = [
