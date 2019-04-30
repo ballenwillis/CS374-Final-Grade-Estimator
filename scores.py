@@ -29,8 +29,8 @@ SCORES = [
 ]
 
 # --------------------- TODO Play with these values to your best guess ---------------
-CLASS_HW_AVERAGE = 80
-CLASS_HW_STD = 10
+CLASS_HW_AVERAGE = 70.998
+CLASS_HW_STD = 26.43
 
 # ------------------------------------------------------
 # NOTE No need to modify below unless you really want to
